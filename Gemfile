@@ -48,3 +48,5 @@ end
 
 
 gem "pg", "~> 1.4"
+
+gem "rspec-rails", "~> 6.0"
