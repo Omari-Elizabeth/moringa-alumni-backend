@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  post "/login",to: "login#create"
+  
   resources :comments, only:[:index,:show,:create,:update,:destroy]
   resources :posts, only:[:index,:show,:create,:update,:destroy]
 
@@ -10,4 +12,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+
 end
