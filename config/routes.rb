@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :announcements
+
   resources :comments, only:[:index,:show,:create,:update,:destroy]
   resources :posts, only:[:index,:show,:create,:update,:destroy]
 
