@@ -79,6 +79,12 @@ GEM
       activesupport
     concurrent-ruby (1.1.10)
     crass (1.0.6)
+    database_cleaner (2.0.1)
+      database_cleaner-active_record (~> 2.0.0)
+    database_cleaner-active_record (2.0.1)
+      activerecord (>= 5.a)
+      database_cleaner-core (~> 2.0.0)
+    database_cleaner-core (2.0.1)
     date (3.3.3)
     debug (1.7.1)
       irb (>= 1.5.0)
@@ -124,6 +130,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.13.10-x86_64-linux)
       racc (~> 1.4)
+    pg (1.4.5)
     puma (5.6.5)
       nio4r (~> 2.0)
     racc (1.6.2)
@@ -159,10 +166,14 @@ GEM
     rake (13.0.6)
     reline (0.3.2)
       io-console (~> 0.5)
+<<<<<<< HEAD
     rspec (3.12.0)
       rspec-core (~> 3.12.0)
       rspec-expectations (~> 3.12.0)
       rspec-mocks (~> 3.12.0)
+=======
+
+>>>>>>> 97690ba22edafb4a74faacfab31b418e0d7487f5
     rspec-core (3.12.0)
       rspec-support (~> 3.12.0)
     rspec-expectations (3.12.2)
@@ -197,15 +208,25 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+
   active_model_serializers
+
   bcrypt (~> 3.1.7)
   bootsnap
+  database_cleaner (~> 2.0)
   debug
+  
   faker
+  pg (~> 1.4)
+
   puma (~> 5.0)
   rails (~> 7.0.4)
+<<<<<<< HEAD
   rspec
   rspec-rails
+=======
+  rspec-rails (~> 6.0)
+>>>>>>> 97690ba22edafb4a74faacfab31b418e0d7487f5
   sqlite3 (~> 1.4)
   tzinfo-data
 
