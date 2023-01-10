@@ -5,7 +5,7 @@ ruby "2.7.4"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
-
+gem "faker"
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
@@ -46,6 +46,12 @@ group :development do
   # gem "spring"
 end
 
+
+gem "pg", "~> 1.4"
+
+gem "rspec-rails", "~> 6.0"
+
+gem "database_cleaner", "~> 2.0"
 gem 'active_model_serializers'
 
 
