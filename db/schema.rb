@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_09_120023) do
+
+ActiveRecord::Schema[7.0].define(version: 2023_01_09_084832) do
+
   create_table "admins", force: :cascade do |t|
     t.string "username"
     t.string "password"
@@ -21,6 +23,24 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_09_120023) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+
+  create_table "comments", force: :cascade do |t|
+    t.string "comment_msg"
+    t.integer "user_id"
+    t.integer "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.string "content"
+    t.integer "likes"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
