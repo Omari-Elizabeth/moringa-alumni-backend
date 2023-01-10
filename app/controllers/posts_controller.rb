@@ -4,7 +4,6 @@ class PostsController < ApplicationController
   # GET /posts
   def index
     @posts = Post.all
-
     render json: @posts
   end
 
@@ -26,17 +25,24 @@ class PostsController < ApplicationController
 
   # PATCH/PUT /posts/1
   def update
+    @post = set_post
     if @post.update(post_params)
       render json: @post
     else
       render json: @post.errors, status: :unprocessable_entity
     end
   end
+  
 
   # DELETE /posts/1
   def destroy
+    #@post.find(params[:id]) destroy
+    #render json: @destroy.errors, status: :not_found
+    @post = set_post
     @post.destroy
+
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -46,6 +52,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.permit(:title, :content, :likes, :user_id)
+      params.require(:post).permit(:title, :content, :likes, :user_id)
     end
 end
