@@ -29,4 +29,18 @@ RSpec.describe "Profiles", type: :request do
       end
     end 
   end
+
+  describe "/profiles/[:id]" do
+    describe "GET/profiles/[:id]" do
+      it "returns an object with status given an id" do
+        user=User.create(username:"Njenga",password_digest:"testpwd")
+        profile=Profile.create(fname:"fname",lname:"lname",gender:"male",cohort:"sd2022",birthday:"5th June" ,profession:"sw engineer",avatar:"https://encrypted-tbn0.gstatic.com/images",user_id:user.id)
+        get "/profiles/#{profile.id}"
+        expect(response.status).to be(200)
+        expect(JSON.parse(response.body)["id"]).to be(profile.id)
+      end
+    end
+  end
+
+
 end
