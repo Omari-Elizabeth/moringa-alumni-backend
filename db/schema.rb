@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_10_051626) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_10_074817) do
   create_table "admins", force: :cascade do |t|
     t.string "username"
     t.string "password"
@@ -35,6 +35,20 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_10_051626) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "profiles", force: :cascade do |t|
+    t.string "fname"
+    t.string "lname"
+    t.string "gender"
+    t.string "cohort"
+    t.string "birthday"
+    t.string "profession"
+    t.string "avatar"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id", null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
@@ -42,4 +56,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_10_051626) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "profiles", "users"
 end
