@@ -391,6 +391,24 @@
           null,
           1,
           null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
           null
         ]
       },
@@ -466,6 +484,23 @@
           null
         ]
       },
+      "/home/moringa/Development/code/phase5/moringa-alumni-backend/app/controllers/profiles_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/moringa/Development/code/phase5/moringa-alumni-backend/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
       "/home/moringa/Development/code/phase5/moringa-alumni-backend/app/controllers/users_controller.rb": {
         "lines": [
           1,
@@ -510,14 +545,8 @@
           null,
           null
         ]
-      },
-      "/home/moringa/Development/code/phase5/moringa-alumni-backend/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
       }
     },
-    "timestamp": 1673350349
+    "timestamp": 1673350851
   }
 }
