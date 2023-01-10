@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :profiles,only:[:index,:create,:show]
+  resources :profiles,only:[:index,:create,:show,:update]
 
   post "/login",to: "login#create"
   

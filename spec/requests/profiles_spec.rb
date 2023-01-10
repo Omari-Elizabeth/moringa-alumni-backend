@@ -40,6 +40,17 @@ RSpec.describe "Profiles", type: :request do
         expect(JSON.parse(response.body)["id"]).to be(profile.id)
       end
     end
+
+    describe "PATCH/profiles/[:id]" do
+      it "expects /profiles to update and return an object" do 
+         user=User.create(username:"Njenga",password:"pwd123",password_confirmation:"pwd123")
+         profile=Profile.create(fname:"fname",lname:"lname",gender:"male",cohort:"sd2022",birthday:"5th June" ,profession:"sw engineer",avatar:"https://encrypted-tbn0.gstatic.com/images",user_id:user.id)
+         patch "/profiles/#{profile.id}", params:{fname:"fname",lname:"lname",gender:"male",cohort:"sd2022",birthday:"5th June" ,profession:"sw engineer",avatar:"https://encrypted-tbn0.gstatic.com/images",user_id:user.id}
+         expect(response.status).to be(200)
+         expect(JSON.parse(response.body)["fname"]).to eq("fname")
+      end
+    end
+
   end
 
 
