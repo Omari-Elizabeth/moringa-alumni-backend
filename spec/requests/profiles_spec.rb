@@ -51,6 +51,15 @@ RSpec.describe "Profiles", type: :request do
       end
     end
 
+    describe 'DELETE /profiles/[:id]' do
+      it 'will delete a profile' do
+        user = User.create(username:"James",password: "deletepwd", password_confirmation:"deletepwd")
+        profile=Profile.create(fname:"fname",lname:"lname",gender:"male",cohort:"sd2022",birthday:"5th June" ,profession:"sw engineer",avatar:"https://encrypted-tbn0.gstatic.com/images",user_id:user.id)
+        delete "/profiles/#{profile.id}"
+        expect(response.status).to eq(204)
+      end
+    end
+
   end
 
 
