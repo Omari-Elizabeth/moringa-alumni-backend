@@ -1,5 +1,4 @@
 class AnnouncementsController < ApplicationController
-    class AnnouncementsController < ApplicationController
         rescue_from ActiveRecord::RecordInvalid, with: :render_unproccessable_entity_response
         rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
     
@@ -44,7 +43,7 @@ class AnnouncementsController < ApplicationController
         end
     
         def announcement_params
-            params.permit(:title, :content)
+            params.permit(:title, :content, :admin_id)
         end
-    end
+    
 end
