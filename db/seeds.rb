@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+Admin.destroy_all 
+Announcement.destroy_all
+
+Admin.create(username: "MainaVincent", password: "54321")
+Admin.create(username: "VincentMaina", password: "12345")
+
+Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises", admin_id: 1)
+Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises", admin_id: 2)
+Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises", admin_id: 1)
+Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises", admin_id: 2)
+Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises", admin_id: 1)
