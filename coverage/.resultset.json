@@ -1,21 +1,16 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/moringa/Development/code/phase5/moringa-alumni-backend/spec/models/user_spec.rb": {
+      "/home/moringa/Development/code/phase5/moringa-alumni-backend/spec/models/profile_spec.rb": {
         "lines": [
           1,
           null,
           1,
           1,
           1,
-          5,
+          3,
           null,
           null,
-          1,
-          1,
-          null,
-          null,
-          1,
           1,
           1,
           null,
@@ -24,6 +19,17 @@
           1,
           1,
           1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           1,
           1,
           null,
@@ -31,22 +37,11 @@
           1,
           1,
           1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
           1,
           1,
           1,
           1,
-          null,
-          null,
-          null,
-          null,
+          1,
           null,
           null,
           null,
@@ -287,15 +282,90 @@
       "/home/moringa/Development/code/phase5/moringa-alumni-backend/config/routes.rb": {
         "lines": [
           1,
-          null,
-          1,
-          null,
-          1,
           1,
           null,
           1,
           null,
           1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/moringa/Development/code/phase5/moringa-alumni-backend/app/models/profile.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/moringa/Development/code/phase5/moringa-alumni-backend/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/moringa/Development/code/phase5/moringa-alumni-backend/spec/models/user_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          5,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
           null,
           null,
           null,
@@ -311,13 +381,16 @@
           1,
           1,
           1,
+          1,
           null
         ]
       },
-      "/home/moringa/Development/code/phase5/moringa-alumni-backend/app/models/application_record.rb": {
+      "/home/moringa/Development/code/phase5/moringa-alumni-backend/spec/requests/profiles_spec.rb": {
         "lines": [
           1,
+          null,
           1,
+          null,
           null
         ]
       },
@@ -445,6 +518,6 @@
         ]
       }
     },
-    "timestamp": 1673335646
+    "timestamp": 1673350349
   }
 }
