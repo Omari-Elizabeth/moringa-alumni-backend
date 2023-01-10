@@ -19,5 +19,14 @@ RSpec.describe "Profiles", type: :request do
         expect(JSON.parse(response.body)).to be_an(Array)
       end
     end
+
+    describe "POST /index" do
+      it "creates a new record and returns it" do 
+        user=User.create(username:"Njenga",password_digest:"testpwd")
+        post "/profiles",params:{fname:"fname",lname:"lname",gender:"male",cohort:"sd2022",birthday:"5th June" ,profession:"sw engineer",avatar:"https://encrypted-tbn0.gstatic.com/images",user_id:user.id}
+        expect(response.status).to be(201)
+        expect(JSON.parse(response.body)["fname"]).to eq("fname")
+      end
+    end 
   end
 end
