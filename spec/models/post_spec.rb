@@ -11,7 +11,7 @@ RSpec.describe Post, type: :model do
       end
 
 
-RSpec.describe Post, type: :model do
+describe "Post" do
   let(:user) { User.create(username: 'testuser') }
   let(:post) { Post.new(title: 'Test Post', content: 'This is a test post', likes: 0, user_id: user.id) }
 
@@ -42,5 +42,6 @@ RSpec.describe Post, type: :model do
   it 'is valid with a title, content, likes, and user_id' do
     expect(post).to be_valid
   end
+end
 end
 
