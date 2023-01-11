@@ -65,3 +65,4 @@ gem 'simplecov', require: false, group: :test
 
 
 
+gem "jwt", "~> 2.6"

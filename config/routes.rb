@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :profiles,only:[:index,:create,:show,:update,:destroy]
 
-  post "/login",to: "login#create"
+  post "/login-user",to: "user_login#create"
   
   resources :announcements
 
