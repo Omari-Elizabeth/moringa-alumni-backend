@@ -56,11 +56,8 @@ end
 
 gem "pg", "~> 1.4"
 
-<<<<<<< HEAD
-=======
 # gem "rspec-rails", "~> 6.0"
 
->>>>>>> 323522cf3806e3836744629acea06c5038a0e564
 gem "database_cleaner", "~> 2.0"
 
 gem 'active_model_serializers'

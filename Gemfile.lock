@@ -170,7 +170,6 @@ GEM
       rspec-core (~> 3.12.0)
       rspec-expectations (~> 3.12.0)
       rspec-mocks (~> 3.12.0)
-
     rspec-core (3.12.0)
       rspec-support (~> 3.12.0)
     rspec-expectations (3.12.2)
@@ -219,19 +218,11 @@ DEPENDENCIES
   pg (~> 1.4)
   puma (~> 5.0)
   rails (~> 7.0.4)
-<<<<<<< HEAD
-  rspec-rails
-=======
   rspec
   rspec-rails
   simplecov
->>>>>>> 323522cf3806e3836744629acea06c5038a0e564
   sqlite3 (~> 1.4)
   tzinfo-data
 
 BUNDLED WITH
-<<<<<<< HEAD
    2.1.4
-=======
-   2.4.3
->>>>>>> 323522cf3806e3836744629acea06c5038a0e564
