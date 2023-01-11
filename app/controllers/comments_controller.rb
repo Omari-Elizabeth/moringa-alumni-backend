@@ -35,6 +35,7 @@ class CommentsController < ApplicationController
 
   # DELETE /comments/1
   def destroy
+    @comment = set_comment
     @comment.destroy
   end
 

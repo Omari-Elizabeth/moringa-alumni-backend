@@ -3,8 +3,10 @@ Rails.application.routes.draw do
 
   post "/login",to: "login#create"
   
+  resources :announcements
+
   resources :comments, only:[:index,:show,:create,:update,:destroy]
-  resources :posts, only:[:index,:show,:create,:update,:destroy]
+  resources :posts, only:[:index, :show, :create, :update, :destroy]
 
   resources :users,only:[:index,:create,:show,:update,:destroy]
   
