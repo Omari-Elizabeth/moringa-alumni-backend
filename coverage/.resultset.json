@@ -1,6 +1,11 @@
 {
   "RSpec": {
     "coverage": {
+      "/home/purity/Desktop/workshop/moringa-alumni-backend/spec/models/comment_spec.rb": {
+        "lines": [
+
+        ]
+      },
       "/home/purity/Desktop/workshop/moringa-alumni-backend/spec/models/post_spec.rb": {
         "lines": [
 
@@ -310,6 +315,6 @@
         ]
       }
     },
-    "timestamp": 1673441695
+    "timestamp": 1673443464
   }
 }

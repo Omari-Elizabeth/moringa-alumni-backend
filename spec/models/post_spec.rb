@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe Profile, type: :model do
+RSpec.describe Post, type: :model do
     DatabaseCleaner.strategy=:truncation
       before(:each) do
         DatabaseCleaner.clean

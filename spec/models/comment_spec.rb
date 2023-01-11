@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe Profile, type: :model do
+RSpec.describe Comment, type: :model do
     DatabaseCleaner.strategy=:truncation
       before(:each) do
         DatabaseCleaner.clean
@@ -11,8 +11,6 @@ RSpec.describe Profile, type: :model do
       end
 
       require "rails_helper"
-
-      require 'rails_helper'
 
       RSpec.describe Comment, type: :model do
         describe 'validations' do
