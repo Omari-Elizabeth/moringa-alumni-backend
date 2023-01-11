@@ -57,4 +57,12 @@ RSpec.describe "Users", type: :request do
     end
   end
 
+  # describe 'LOGIN /user' do
+  #   it 'will LOGIN a user' do
+  #     post "/login"
+  #     expect(response.status).to eq(204)
+  #   end
+  # end
+
+
 end
