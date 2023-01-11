@@ -10,16 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema[7.0].define(version: 2023_01_09_084832) do
-
+ActiveRecord::Schema[7.0].define(version: 2023_01_11_122103) do
   create_table "admins", force: :cascade do |t|
     t.string "username"
-    t.string "password_digest"
+    t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
 
   create_table "announcements", force: :cascade do |t|
     t.string "title"
@@ -28,7 +25,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_09_084832) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["admin_id"], name: "index_announcements_on_admin_id"
-    end
+  end
 
   create_table "comments", force: :cascade do |t|
     t.string "comment_msg"
@@ -43,13 +40,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_09_084832) do
     t.string "content"
     t.integer "likes"
     t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
