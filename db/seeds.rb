@@ -9,6 +9,8 @@ puts "🌱 Seeding Greatness!..."
 
 Admin.destroy_all 
 Announcement.destroy_all
+Post.destroy_all
+Comment.destroy_all
 
 Admin.create(username: "MainaVincent", password: "54321")
 Admin.create(username: "VincentMaina", password: "12345")
