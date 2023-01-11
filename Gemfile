@@ -60,4 +60,8 @@ gem "pg", "~> 1.4"
 
 gem "database_cleaner", "~> 2.0"
 
+gem 'active_model_serializers'
+gem 'simplecov', require: false, group: :test
+
+
 
