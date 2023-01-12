@@ -1,9 +1,23 @@
 require "rails_helper"
 
 RSpec.describe Post, type: :model do
-    describe "Post Properties" do
-        it "verifies post properties" do 
-            expect(Post.new.attributes).to include("title", "content", "likes", "user_id")
-        end
-    end
+    DatabaseCleaner.strategy=:truncation
+      before(:each) do
+        DatabaseCleaner.clean
+      end
+    
+      after(:all) do
+        DatabaseCleaner.clean
+      end
+
+
+describe "association" do
+  it {should have_many(:comments).class_name("Comment")}
+
 end
+
+describe "validation" do
+  it {should validate_presence_of(:image)}
+end
+end
+
