@@ -36,6 +36,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 gem 'active_model_serializers'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -60,7 +61,8 @@ gem "pg", "~> 1.4"
 
 gem "database_cleaner", "~> 2.0"
 
-gem 'active_model_serializers'
+# gem 'active_model_serializers' <= This is a duplicate of line 38.
+
 gem 'simplecov', require: false, group: :test
 
 
