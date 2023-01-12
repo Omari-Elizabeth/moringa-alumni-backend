@@ -38,7 +38,9 @@ gem "bootsnap", require: false
 gem 'active_model_serializers'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
-
+group :test do
+  gem 'shoulda-matchers', '~> 5.0'
+end
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem "rack-cors"
 
@@ -60,7 +62,7 @@ gem "pg", "~> 1.4"
 
 gem "database_cleaner", "~> 2.0"
 
-gem 'active_model_serializers'
+#gem 'active_model_serializers'
 gem 'simplecov', require: false, group: :test
 
 
