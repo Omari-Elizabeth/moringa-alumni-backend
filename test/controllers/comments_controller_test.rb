@@ -33,6 +33,7 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
       delete comment_url(@comment), as: :json
     end
 
-    assert_response :no_content
+      assert_response :no_content
+   end
   end
 end
