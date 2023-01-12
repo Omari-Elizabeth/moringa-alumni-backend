@@ -130,8 +130,6 @@ GEM
     nokogiri (1.13.10)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
-    nokogiri (1.13.10-x86_64-linux)
-      racc (~> 1.4)
     pg (1.4.5)
     puma (5.6.5)
       nio4r (~> 2.0)
@@ -189,12 +187,15 @@ GEM
       rspec-mocks (~> 3.11)
       rspec-support (~> 3.11)
     rspec-support (3.12.0)
+    shoulda-matchers (5.3.0)
+      activesupport (>= 5.2.0)
     simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.4)
+      mini_portile2 (~> 2.8.0)
     sqlite3 (1.5.4-x86_64-linux)
     thor (1.2.1)
     timeout (0.3.1)
@@ -207,7 +208,6 @@ GEM
 
 PLATFORMS
   ruby
-  x86_64-linux
 
 DEPENDENCIES
   active_model_serializers
@@ -216,19 +216,16 @@ DEPENDENCIES
   database_cleaner (~> 2.0)
   debug
   faker
-<<<<<<< HEAD
-  jwt
-=======
   jwt (~> 2.6)
->>>>>>> 400ade752709b9f78c4775aecedde0d970c92021
   pg (~> 1.4)
   puma (~> 5.0)
   rails (~> 7.0.4)
   rspec
   rspec-rails
+  shoulda-matchers (~> 5.0)
   simplecov
   sqlite3 (~> 1.4)
   tzinfo-data
 
 BUNDLED WITH
-   2.4.3
+   2.1.4
