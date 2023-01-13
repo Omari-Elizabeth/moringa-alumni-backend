@@ -201,6 +201,8 @@ GEM
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.4)
       mini_portile2 (~> 2.8.0)
+    sqlite3 (1.5.4)
+      mini_portile2 (~> 2.8.0)
     sqlite3 (1.5.4-x86_64-linux)
     thor (1.2.1)
     timeout (0.3.1)
@@ -223,7 +225,7 @@ DEPENDENCIES
   debug
   faker
   jwt (~> 2.6)
-  pg (~> 1.4)
+  pg (~> 1.4, >= 1.4.5)
   puma (~> 5.0)
   rack-cors
   rails (~> 7.0.4)
