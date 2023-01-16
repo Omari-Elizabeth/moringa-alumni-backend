@@ -6,10 +6,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
 
-
 gem "faker"
 gem "rspec"
-
 
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
@@ -36,13 +34,14 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 gem 'active_model_serializers'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 group :test do
   gem 'shoulda-matchers', '~> 5.0'
 end
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem "rack-cors"
+gem "rack-cors"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -62,9 +61,6 @@ gem "pg", "~> 1.4"
 
 gem "database_cleaner", "~> 2.0"
 
-#gem 'active_model_serializers'
 gem 'simplecov', require: false, group: :test
-
-
 
 gem "jwt", "~> 2.6"

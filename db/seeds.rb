@@ -11,9 +11,15 @@ Admin.destroy_all
 Announcement.destroy_all
 Post.destroy_all
 Comment.destroy_all
+Profile.destroy_all
 
 Admin.create(username: "MainaVincent", password: "54321")
 Admin.create(username: "VincentMaina", password: "12345")
+
+User.create(username: "Chiveli", password: "password")
+User.create(username: "Cate", password: "password")
+User.create(username: "James", password: "password")
+User.create(username: "Purity", password: "password")
 
 Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises", admin_id: 1)
 Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises", admin_id: 2)
@@ -38,5 +44,12 @@ end
         post_id:rand(1..4)
     )
 end 
+
+Profile.create(fname:"Purity",lname:"lname",gender:"female",cohort:"sd2022",birthday:"5th June" ,profession:"sw engineer",avatar:"https://encrypted-tbn0.gstatic.com/images",user_id:rand(1..4))
+Profile.create(fname:"James",lname:"lname",gender:"male",cohort:"sd2022",birthday:"5th June" ,profession:"sw engineer",avatar:"https://encrypted-tbn0.gstatic.com/images",user_id:rand(1..4))
+Profile.create(fname:"Chiveli",lname:"lname",gender:"male",cohort:"sd2022",birthday:"5th June" ,profession:"sw engineer",avatar:"https://encrypted-tbn0.gstatic.com/images",user_id:rand(1..4))
+Profile.create(fname:"Cate",lname:"lname",gender:"female",cohort:"ds2022",birthday:"5th June" ,profession:"sw engineer",avatar:"https://encrypted-tbn0.gstatic.com/images",user_id:rand(1..4))
+Profile.create(fname:"Liz",lname:"lname",gender:"female",cohort:"ds2022",birthday:"5th June" ,profession:"sw engineer",avatar:"https://encrypted-tbn0.gstatic.com/images",user_id:rand(1..4))
+Profile.create(fname:"Vin",lname:"lname",gender:"male",cohort:"ds2022",birthday:"5th June" ,profession:"sw engineer",avatar:"https://encrypted-tbn0.gstatic.com/images",user_id:rand(1..4))
 
 puts "✅ Done seeding!"
