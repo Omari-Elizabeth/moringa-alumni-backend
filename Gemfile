@@ -64,3 +64,5 @@ gem "database_cleaner", "~> 2.0"
 gem 'simplecov', require: false, group: :test
 
 gem "jwt", "~> 2.6"
+
+gem 'image_processing'
