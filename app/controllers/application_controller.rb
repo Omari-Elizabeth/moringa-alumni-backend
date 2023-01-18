@@ -28,8 +28,20 @@ class ApplicationController < ActionController::API
         end
     end
 
+    def authorized_admin
+        decoded_token=decode_token()
+        if decode_token
+            admin_id=decoded_token[0]["admin_id"]
+            admin=Admin.find(id:admin_id)
+        end
+    end
+
+    def logged_in?
+        !!authorized_user||!!authorized_admin
+    end
+
     def authorize
-        render json:{message:"You have to log in"}, status: :unauthorized unless authorized_user
+        render json:{message:"You have to log in"}, status: :unauthorized unless logged_in?
     end
 end
 
