@@ -21,11 +21,11 @@ User.create(username: "Cate", password: "password")
 User.create(username: "James", password: "password")
 User.create(username: "Purity", password: "password")
 
-Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises", admin_id: 1)
-Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises", admin_id: 2)
-Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises", admin_id: 1)
-Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises", admin_id: 2)
-Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises", admin_id: 1)
+Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises")
+Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises")
+Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises")
+Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises")
+Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises")
 
 image = File.open(File.join(Rails.root,"/spec/support/assets/test_image.jpg")).read
 
