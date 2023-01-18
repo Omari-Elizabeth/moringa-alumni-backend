@@ -3,8 +3,7 @@ class CreateAnnouncements < ActiveRecord::Migration[7.0]
     create_table :announcements do |t|
       t.string :title
       t.string :content
-      t.belongs_to :admin
-
+     
       t.timestamps
     end
   end
