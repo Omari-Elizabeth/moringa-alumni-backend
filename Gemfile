@@ -55,7 +55,8 @@ group :development do
 end
 
 
-gem "pg", "~> 1.4"
+# gem "pg", "~> 1.4"
+gem 'pg', '~> 1.4', '>= 1.4.5'
 
 # gem "rspec-rails", "~> 6.0"
 

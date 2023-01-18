@@ -49,10 +49,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_12_062723) do
   create_table "announcements", force: :cascade do |t|
     t.string "title"
     t.string "content"
-    t.integer "admin_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["admin_id"], name: "index_announcements_on_admin_id"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -71,6 +69,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_12_062723) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image"
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "profiles", force: :cascade do |t|
