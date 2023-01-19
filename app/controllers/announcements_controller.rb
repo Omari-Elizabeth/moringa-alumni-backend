@@ -43,7 +43,7 @@ class AnnouncementsController < ApplicationController
         end
     
         def announcement_params
-            params.permit(:title, :content, :admin_id)
+            params.permit(:title, :content, :admin_id, :announcement_image)
         end
     
 end

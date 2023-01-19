@@ -21,25 +21,27 @@ User.create(username: "Cate", password: "password")
 User.create(username: "James", password: "password")
 User.create(username: "Purity", password: "password")
 
-Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises", admin_id: 1)
-Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises", admin_id: 2)
-Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises", admin_id: 1)
-Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises", admin_id: 2)
-Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises", admin_id: 1)
+Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises")
+Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises")
+Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises")
+Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises")
+Announcement.create(title: "Career Fair", content: "We'll have our annual career fair on 16th January at the school premises")
+
+image = File.open(File.join(Rails.root,"/spec/support/assets/test_image.jpg")).read
 
 15.times do
-    Post.create(
+    post = Post.create(
         title: Faker::Lorem.sentence(word_count: 3),
         content: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4),
         likes:rand(1..4),
-        user_id:rand(1..4)
-
+        user_id:rand(1..4),
     )
+    post.image.attach(io: File.open(File.join(Rails.root,"/spec/support/assets/test_image.jpg")), filename: 'test_image.jpg')
 end
 
 10.times do
     Comment.create(
-        comment_msg: Faker::Lorem.sentence(word_count: 3),
+        comment_msg: Faker::Lorem.sentence(word_count: 10),
         user_id:rand(1..4),
         post_id:rand(1..4)
     )

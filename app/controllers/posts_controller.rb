@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     render json: @posts
+    
   end
 
   # GET /posts/1
@@ -15,9 +16,11 @@ class PostsController < ApplicationController
   # POST /posts
   def create
     @post = Post.new(post_params)
+    @post.image.attach(params[:image])
 
     if @post.save
-      render json: @post, status: :created, location: @post, image: @post
+      # render json: @post, status: :created, location: @post
+      render json: @post, status: :created
     else
       render json: @post.errors, status: :unprocessable_entity
     end
@@ -49,9 +52,12 @@ class PostsController < ApplicationController
     def set_post
       @post = Post.find(params[:id])
     end
+  #    def image
+  #   url_for(@posts[0].image)
+  # end
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:title, :content, :likes, :user_id, )
+      params.permit(:title, :content, :likes, :user_id, :image)
     end
 end

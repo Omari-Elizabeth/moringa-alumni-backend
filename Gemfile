@@ -12,6 +12,9 @@ gem "rspec"
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
+
+gem "cloudinary"
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
@@ -55,7 +58,8 @@ group :development do
 end
 
 
-gem "pg", "~> 1.4"
+# gem "pg", "~> 1.4"
+gem 'pg', '~> 1.4', '>= 1.4.5'
 
 # gem "rspec-rails", "~> 6.0"
 
@@ -64,3 +68,5 @@ gem "database_cleaner", "~> 2.0"
 gem 'simplecov', require: false, group: :test
 
 gem "jwt", "~> 2.6"
+
+gem 'image_processing'
