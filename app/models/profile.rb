@@ -1,4 +1,5 @@
 class Profile < ApplicationRecord
+    has_one_attached :avatar
     belongs_to :user 
 
     # validates :my_field, format: { with: /.+sd.+/ }
