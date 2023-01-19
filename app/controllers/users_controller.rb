@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+    rescue_from ActiveRecord::RecordInvalid, with: :invalid_user_details 
     def index
         users=User.all
         render json:users
@@ -38,4 +38,9 @@ class UsersController < ApplicationController
     def find_user_by_id
       User.find(params[:id])
     end
+
+    def invalid_user_details invalid
+        render json:{errors: invalid.record.errors.full_messages},status: :unprocessable_entity
+    end
+
 end
