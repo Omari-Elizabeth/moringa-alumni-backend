@@ -41,7 +41,7 @@ end
 
 10.times do
     Comment.create(
-        comment_msg: Faker::Lorem.sentence(word_count: 3),
+        comment_msg: Faker::Lorem.sentence(word_count: 10),
         user_id:rand(1..4),
         post_id:rand(1..4)
     )
