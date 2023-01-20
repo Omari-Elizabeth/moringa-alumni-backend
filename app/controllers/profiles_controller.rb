@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-
+    rescue_from ActiveRecord::RecordInvalid, with: :invalid_profile_details 
     def index
         profiles=Profile.all
         render json:profiles
@@ -46,5 +46,10 @@ class ProfilesController < ApplicationController
     def find_profile_by_id
         Profile.find(params[:id])
     end
+
+    def invalid_profile_details invalid
+        render json:{errors: invalid.record.errors.full_messages},status: :unprocessable_entity
+    end
+
 
 end
