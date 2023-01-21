@@ -5,10 +5,21 @@ class ProfilesController < ApplicationController
         render json:profiles
     end
 
+    # def create
+    #     profile=Profile.create!( profile_params)
+    #     render json: profile, status: :created
+    # end
+
     def create
-        profile=Profile.create!( profile_params)
-        render json: profile, status: :created
+        @profile = Profile.new(profile_params)
+        if @profile.save
+          # render json: @post, status: :created, location: @post
+          render json: @profile, status: :created
+        else
+          render json: @profile.errors, status: :unprocessable_entity
+        end
     end
+    
 
     def show
         render json:find_profile_by_id

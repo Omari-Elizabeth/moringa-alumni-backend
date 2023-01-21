@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :profiles,only:[:index,:create,:show,:update,:destroy]
 
   post "/login-user",to: "user_login#create"
-  post "/admin-login",to: "admin_login#create"
+  post "/admin_login",to: "admin_login#create"
   
   resources :announcements
 
@@ -12,7 +12,8 @@ Rails.application.routes.draw do
 
   resources :users,only:[:index,:create,:show,:update,:destroy]
   
-  resources :admins
+  resources :admins, only:[:index,:create,:show,:update,:destroy]
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

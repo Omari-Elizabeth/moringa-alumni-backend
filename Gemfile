@@ -70,3 +70,4 @@ gem 'simplecov', require: false, group: :test
 gem "jwt", "~> 2.6"
 
 gem 'image_processing'
+gem "net-http"

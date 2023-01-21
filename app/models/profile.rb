@@ -1,7 +1,10 @@
 class Profile < ApplicationRecord
-    has_one_attached :avatar
+   
     belongs_to :user 
 
+    has_one_attached :avatar
+      
+  
     # validates :my_field, format: { with: /.+sd.+/ }
 
     validates :cohort,format: { with: /.*(sd|ds).*/i }
